@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { Die } from './features/die/Die';
+import { Die } from './features/roller/Roller';
 
 function App() {
   return (

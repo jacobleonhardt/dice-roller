@@ -1,7 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  roll: 0
+  roll: 0,
+  prev: [],
 }
 
 export const dieSlice = createSlice({
@@ -10,11 +11,12 @@ export const dieSlice = createSlice({
   reducers: {
     rollDie: (state, action) => {
       state.roll = action.payload
+      state.prev.push(action.payload)
     },
 
     reset: (state) => {
       state.roll = 0
-    }
+    },
   },
 })
 
